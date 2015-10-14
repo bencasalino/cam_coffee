@@ -1,0 +1,28 @@
+#name-and-slogan #site-slogan {
+  font-family: 'Comic Sans MS',Cursive;
+  font-style: italic;
+  text-align: center;
+  background-color: #c79557;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color: #2e2002;
+  border-right-color: #2e2002;
+  border-bottom-color: #2e2002;
+  border-left-color: #2e2002;
+  margin-top: 25px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#header .section {
+  padding-bottom: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  margin-bottom: 0px;
+  height: 175px;
+}
+
