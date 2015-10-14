@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Wine Content Type feature.
+ */
+
+include_once 'wine_content_type.features.inc';
