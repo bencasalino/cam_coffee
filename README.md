@@ -12,7 +12,8 @@ _A drupal fan site for people and places named Dakota_
 _Make MySQL database named: cameron_  
 _Import database from sites/db-backup_  
 _Create MySQL user name: admin & password: adminPassw0rd_  
-_Drupal user login name: cameron maintenance & password: adminPassw0rd_
+_Drupal user login name: cameron maintenance & password:  - changed to 'root', no longer 'adminPassw0rd'_
+
 _Cameron's login name: Cameron & password: treehouse
 
 ## Technologies Used
