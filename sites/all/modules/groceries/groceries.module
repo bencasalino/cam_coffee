@@ -21,7 +21,7 @@ function make_grocery_list()
 
   $grocery_list['milk'] = array(
     'price' => 2.99,
-    'quanitity' => 1,
+    'quantity' => 1,
   );
 
   return $grocery_list;
@@ -31,31 +31,38 @@ function grocery_list()
 {
   $groceries = make_grocery_list();
   $list = '';
+  $price = 1;
 
-  foreach($groceries as $grocery_to_buy_key => $grocery_descriptive_componant){
+  foreach($groceries as $grocery_to_buy_key => $grocery_descriptive_componants){
     $list .= '<p>' . $grocery_to_buy_key .'</p>';
-    foreach($grocery_descriptive_componant as $description_key => $specific){
+    var_dump($grocery_descriptive_componants);
+    foreach($grocery_descriptive_componants as $description_key => $specific){
+      $price *= $specific;
       $list .= '
           <ul>
             <li>' . $description_key . ': ' . $specific . '</li>
           </ul>
       ';
     }
+    $list .= ' <p>' . $price . '</p> ';
+    $price = 1;
+
   }
   return $list;
 }
 
+//
 // function grocery_list()
 // {
 //   $groceries = make_grocery_list();
 //   $list = '';
 //
-//   foreach($groceries as $grocery_item_key => $grocery_item_value){
-//     $list .= '<p>' . $grocery_item_key .'</p>';
-//     foreach($grocery_item_value as $key => $value){
+//   foreach($groceries as $grocery_to_buy_key => $grocery_descriptive_componant){
+//     $list .= '<p>' . $grocery_to_buy_key .'</p>';
+//     foreach($grocery_descriptive_componant as $description_key => $specific){
 //       $list .= '
 //           <ul>
-//             <li>' . $key . ': ' . $value . '</li>
+//             <li>' . $description_key . ': ' . $specific . '</li>
 //           </ul>
 //       ';
 //     }
