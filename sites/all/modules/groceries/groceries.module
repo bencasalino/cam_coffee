@@ -35,7 +35,6 @@ function grocery_list()
 
   foreach($groceries as $grocery_to_buy_key => $grocery_descriptive_componants){
     $list .= '<p>' . $grocery_to_buy_key .'</p>';
-    var_dump($grocery_descriptive_componants);
     foreach($grocery_descriptive_componants as $description_key => $specific){
       $price *= $specific;
       $list .= '
@@ -44,28 +43,11 @@ function grocery_list()
           </ul>
       ';
     }
-    $list .= ' <p>' . $price . '</p> ';
+    //Set list price outside of the description key loop:
+    $list .= ' <p> Total for item: ' . $price . '</p> ';
+    //Then the $price beloe this resets the value to one before looping through again for the next field.
     $price = 1;
 
   }
   return $list;
 }
-
-//
-// function grocery_list()
-// {
-//   $groceries = make_grocery_list();
-//   $list = '';
-//
-//   foreach($groceries as $grocery_to_buy_key => $grocery_descriptive_componant){
-//     $list .= '<p>' . $grocery_to_buy_key .'</p>';
-//     foreach($grocery_descriptive_componant as $description_key => $specific){
-//       $list .= '
-//           <ul>
-//             <li>' . $description_key . ': ' . $specific . '</li>
-//           </ul>
-//       ';
-//     }
-//   }
-//   return $list;
-// }
