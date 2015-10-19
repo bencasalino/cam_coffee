@@ -37,9 +37,9 @@ function grocery_list()
     $list .= '<p>' . $grocery_to_buy_key .'</p>';
     foreach($grocery_descriptive_componants as $description_key => $specific){
       $price *= $specific;
-      $list .= '
+      $list .= "
           <ul>
-            <li>' . $description_key . ': ' . $specific . '</li>
+            <li> $description_key : " . $specific . '</li>
           </ul>
       ';
     }
