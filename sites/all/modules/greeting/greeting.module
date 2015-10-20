@@ -1,35 +1,68 @@
 <?php
 
-function greeting_menu() {
-  $items = array();
-  $items['hello_friend'] = array(
-    'title' => "Hello Friend!",
-    'page callback' => 'say_hello',
-    'access callback' => TRUE,
-    'type' => MENU_CALLBACK,
-  );
-  $items['goodbye'] = array(
-    'title' => 'Goodbye Friend!',
-    'page callback' => 'say_goodbye',
-    'access callback' => TRUE,
-    'type' => MENU_CALLBACK
-  );
-  return $items;
-}
+// function greeting_menu() {
+//   $items = array();
+//   $items['hello_friend'] = array(
+//     'title' => "Hello Friend!",
+//     'page callback' => 'say_hello',
+//     'access callback' => TRUE,
+//     'type' => MENU_CALLBACK,
+//   );
+//
+//   $items['goodbye'] = array(
+//     'title' => 'Goodbye Friend!',
+//     'page callback' => 'say_goodbye',
+//     'access callback' => TRUE,
+//     'type' => MENU_CALLBACK
+//   );
+//   return $items;
+// }
+//
+// function say_hello() {
+//   return '<p>Hello my dear friend!<p>';
+//
+// }
+//
+// function say_goodbye(){
+//   return '<p>Goodbye my dear friend!</p>';
+// }
+//
+// function greeting_user_login() {
+//   $_GET['destination'] = 'hello_friend';
+// }
+//
+// function greeting_user_logout() {
+//   $_GET['destination'] = 'goodbye';
+// }
 
+// function
 function say_hello() {
-  return '<p>Hello my dear friend!<p>';
-
+  GLOBAL $user;
+if (in_array('administrator', $user->roles)) {
+  return 'welcome to admin view';
+}  elseif (in_array('administrator', $user->roles)
+  return 'nice to see you';
+};
 }
 
-function say_goodbye(){
-  return '<p>Goodbye my dear friend!</p>';
-}
+  function say_goodbye_admin(){
+    return '<p>Goodbye my dear admin!</p>';
+  }
 
-function greeting_user_login() {
+  function say_goodbye_auth(){
+    return '<p>Goodbye my dear friend!</p>';
+  }
+
+  // hooks
+
+function greetings_user_login() {
   $_GET['destination'] = 'hello_friend';
 }
 
-function greeting_user_logout() {
-  $_GET['destination'] = 'goodbye';
-}
+function greetings_user_login() {
+GLOBAL $user;
+if(in_array('adminstrator', $user->roles)) {
+  $_GET['destination'] = 'hello_friend';
+} elseif (in_array('authenticated_user', $user->roles)) {
+  $_GET['destination'] = 'hello_friend';
+}}
