@@ -2,7 +2,7 @@
 # Camerons Coffee - Treehouse Assignment
 
 
-#### By Mike Chastain, Brian Borealis & Jason Bethel
+#### By Chris Swan & Ben Casalino
 
 ## Description
 
@@ -12,7 +12,7 @@ _A drupal fan site for people and places named Dakota_
 _Make MySQL database named: cameron_  
 _Import database from sites/db-backup_  
 _Create MySQL user name: admin & password: adminPassw0rd_  
-_Drupal user login name: cameron maintenance & password:  - changed to 'root', no longer 'adminPassw0rd'_
+_Drupal user login name: cameronAdmin & password: 'root'_
 
 _Cameron's login name: Cameron & password: treehouse
 
@@ -25,7 +25,7 @@ _Drupal and MySQL_
 
 
 
-Copyright (c) 2015 Mike Chastain, Brian Borealis & Jason Bethel
+Copyright (c) 2015 Chris Swan & Ben Casalino
 
 This software is licensed under the MIT license.
 
